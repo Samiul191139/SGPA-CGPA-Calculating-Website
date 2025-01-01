@@ -13,13 +13,50 @@
             <h1>IUBAT SGPA and CGPA Calculator</h1>
         </header>
         <main>
-            <section id="sgpa-section">
-                <h2>SGPA Calculation</h2>
-                <label>Number of Subjects:</label>
-                <input type="number" id="subjects" placeholder="Enter number of subjects" />
-                <button onclick="generateSubjectInputs()">Generate Input Fields</button>
-                <div id="subject-inputs"></div>
+            <section id="examination-system">
+                <h2>Examination System Overview</h2>
+                <p>
+                    The grades for each course are determined based on performance in 
+                    first-term, mid-term, final exams, quizzes, attendance, projects, and other activities.
+                    The breakdown of weights is as follows:
+                </p>
+                <ul>
+                    <li>First Term Examination: <b>20%</b></li>
+                    <li>Mid-Term Examination: <b>20%</b></li>
+                    <li>Quizzes (minimum 10): <b>5%</b></li>
+                    <li>Attendance: <b>5%</b></li>
+                    <li>Assignments/Projects/Presentations: <b>15%</b></li>
+                    <li>Final Examination: <b>35%</b></li>
+                </ul>
             </section>
+            
+            <section id="sgpa-calculation">
+                <h2>SGPA Calculation</h2>
+                <label>First Term Marks:</label>
+                <input type="number" id="first-term" placeholder="Enter First Term Marks" />
+            
+                <label>Mid-Term Marks:</label>
+                <input type="number" id="mid-term" placeholder="Enter Mid-Term Marks" />
+            
+                <label>Final Exam Marks:</label>
+                <input type="number" id="final-exam" placeholder="Enter Final Exam Marks" />
+            
+                <label>Quiz Marks (Total):</label>
+                <input type="number" id="quiz-marks" placeholder="Enter Quiz Marks" />
+            
+                <label>Attendance Marks:</label>
+                <input type="number" id="attendance" placeholder="Enter Attendance Marks" />
+            
+                <label>Assignment/Project Marks:</label>
+                <input type="number" id="assignment-marks" placeholder="Enter Assignment Marks" />
+            
+                <label>Credit Hours:</label>
+                <input type="number" id="credit-hours" placeholder="Enter Credit Hours" />
+            
+                <button onclick="calculateUpdatedSGPA()">Calculate SGPA</button>
+                <p id="sgpa-output"></p>
+            </section>
+            
             <section id="cgpa-section">
                 <h2>CGPA Calculation</h2>
                 <label>Total Grade Points:</label>
